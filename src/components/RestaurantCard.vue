@@ -20,6 +20,9 @@
 <script>
 export default{
     name: "RestaurantCard",
+    props: {
+        info_restaurant: Object
+    }
     
 }
 </script>
