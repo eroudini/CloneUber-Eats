@@ -1,27 +1,41 @@
 <template>
 <div class="restaurant--card">
-<div class="restaurant--image">
+<div :style="changeBackground" class="restaurant--image">
 
 </div>
 <div class="restaurant--information">
     <div class="top">
         <p class="name">
-            Suwbay
+            {{info_restaurant.name}}
         </p>
         <p class="note">
-            <span>4.5</span>
+            <span>{{ info_restaurant.note }}</span>
         </p>
     </div>
-    <p class="time">20-30mn</p>
+    <p class="time">{{info_restaurant.drive_time}}</p>
 </div>
 </div>
 </template>
 
 <script>
+// import 
+import { computed } from 'vue'
+
 export default{
     name: "RestaurantCard",
     props: {
         info_restaurant: Object
+    },
+    setup(props) {
+        const changeBackground = computed(() => {
+            return {
+                backgroundImage: `url(${props.info_restaurant.image})`
+            }
+        })
+        // return 
+        return {
+            changeBackground
+        }
     }
     
 }
