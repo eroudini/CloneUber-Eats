@@ -13,12 +13,14 @@
           placeholder="De quoi avez vous envie ?"
         />
         <div class="search">
+         <router-link to="/restaurant">
           <div v-for="(restaurant, i) in search_restaurant" :key="i" class="container--restaurant--search">
             <div class="wrapper-img">
               <img :src="restaurant.image" alt="">
             </div>
             <p>{{ restaurant.name }}</p> 
           </div>
+         </router-link>
         </div>
       </div>
     </div>
@@ -80,14 +82,16 @@ export default {
     let user_search_restaurant = ref("");
     let search_restaurant = ref([]);
 
-    watch(user_search_restaurant, (new_Value) => {
-      let regex = RegExp(new_Value);
+    watch(user_search_restaurant, (new_value) => {
+      let regex = RegExp(new_value);
 
       let new_search_restaurant = all_restaurants.filter((restaurant) =>
-        regex.test(restaurant.name)
+        regex.test(restaurant.name.toLowerCase())
       );
 
       search_restaurant.value = new_search_restaurant;
+
+      new_value == 0 ? search_restaurant.value = [] : search_restaurant;
       
     });
 
@@ -136,6 +140,10 @@ export default {
           display: flex;
           align-items: center;
           padding: 10px;
+
+          &:hover{
+            background: #f6f6f6;
+          }
 
           .wrapper--img{
             height: 40px;
