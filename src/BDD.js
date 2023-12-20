@@ -1,20 +1,20 @@
 
 const info = [
     {
-      name: 'Subway',
-      image: 'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC8zNzg4MDJiMC1jNTI4LTQ4MjktYjBiNS0wY2M2NDBkZjYzY2QuanBlZw==',
+      name: 'Le Galawa',
+      image: 'https://media-cdn.tripadvisor.com/media/photo-s/14/e7/1c/fb/restaurant-grill-le-coraya.jpg',
       note: '4.5',
       drive_time: '20 - 30mn'
     },
     {
-      name: 'McDonald\'s' ,
-      image: 'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9iODQ1NDA4Zi1lOGFmLTRkMDUtYWI4YS0yNWMwYzVjMGI4YWUuanBlZw==',
+      name: 'Le Coelacanthe' ,
+      image: 'https://media-cdn.tripadvisor.com/media/photo-s/14/e7/1c/ed/restaurant-grill-le-coraya.jpg',
       note: '3.9',
       drive_time: '15 - 25mn'
     },
     {
-      name: 'O\'Tacos',
-      image: 'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC9mOGQ5MjU5ZS00YjIzLTRkNWYtOWQ1YS0wNjBlNjE2NDI4Y2QuanBlZw==',
+      name: 'Le Comoco',
+      image: 'https://d1ralsognjng37.cloudfront.net/1882d400-5f25-470f-810c-d0282501199c.webp',
       note: '4.4',
       drive_time: '15 - 25mn'
     },
